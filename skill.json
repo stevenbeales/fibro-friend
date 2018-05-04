@@ -29,7 +29,7 @@
       "custom": {
         "endpoint": {
           "sslCertificateType": "Wildcard",
-          "uri": "https://fibro-friend-dev.us-east-1.elasticbeanstalk.com/"
+          "uri": "https://fibro.herokuapp.com/"
         },
         "interfaces": []
       }
@@ -44,7 +44,7 @@
       "allowsPurchases": false,
       "locales": {
         "en-US": {
-          "privacyPolicyUrl": "https://fibro-friend-dev.us-east-1.elasticbeanstalk.com/privacy"
+          "privacyPolicyUrl": "https://fibro.herokuapp.com/privacy"
         }
       },
       "isExportCompliant": true,
