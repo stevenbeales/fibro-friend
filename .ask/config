@@ -8,12 +8,13 @@
           "apis": {
             "custom": {
               "endpoint": {
-                "uri": "ask-custom-fibro-friend-default"
+                "uri": "https://fibro.herokuapp.com/"
               }
             }
           }
         }
-      }
+      },
+      "in_skill_products": []
     }
   }
 }
