@@ -1,0 +1,249 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "fibro friend",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": ["What can I do", "I'm stuck"]
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": ["Start", "Start Over"]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": ["OK", "Okay"]
+        },
+        {
+          "name": "ReadEntry",
+          "slots": [
+            {
+              "name": "day",
+              "type": "AMAZON.DATE"
+            },
+            {
+              "name": "read",
+              "type": "READ"
+            },
+            {
+              "name": "log",
+              "type": "LOG"
+            },
+            {
+              "name": "entry",
+              "type": "ENTRY"
+            }
+          ],
+          "samples": [
+            "{read} {log} for {day}",
+            "Get {entry} for {day}",
+            "Give me {entry} for {day}",
+            "What happened on {day}",
+            "{read} {day}"
+          ]
+        },
+        {
+          "name": "ReadAll",
+          "slots": [
+            {
+              "name": "read",
+              "type": "READ"
+            },
+            {
+              "name": "log",
+              "type": "LOG"
+            }
+          ],
+          "samples": [
+            "{read} {log}",
+            "What happened",
+            "{read} everything",
+            "{read} all"
+          ]
+        },
+        {
+          "name": "ReadLast",
+          "slots": [
+            {
+              "name": "read",
+              "type": "READ",
+              "samples": ["Yes"]
+            },
+            {
+              "name": "log",
+              "type": "LOG"
+            },
+            {
+              "name": "n",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{read} last {n} {log}",
+            "{read} last {log}",
+            "{read} last "
+          ]
+        },
+        {
+          "name": "NextEntry",
+          "slots": [
+            {
+              "name": "log",
+              "type": "LOG"
+            }
+          ],
+          "samples": ["Next {log}"]
+        },
+        {
+          "name": "DeleteEntry",
+          "slots": [
+            {
+              "name": "log",
+              "type": "LOG"
+            }
+          ],
+          "samples": ["Delete {log}"]
+        }
+      ],
+      "types": [
+        {
+          "name": "OPEN",
+          "values": [
+            {
+              "name": {
+                "value": "Open",
+                "synonyms": ["Start", "Begin", "Launch", "Run", "Say", "Ask"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "SAVE",
+          "values": [
+            {
+              "name": {
+                "value": "Save",
+                "synonyms": ["Store"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "READ",
+          "values": [
+            {
+              "name": {
+                "value": "Read",
+                "synonyms": ["Speak"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "LOG",
+          "values": [
+            {
+              "name": {
+                "value": "log",
+                "synonyms": [
+                  "journals",
+                  "diaries",
+                  "diary",
+                  "journal",
+                  "entries",
+                  "entry",
+                  "logs"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "ENTRY",
+          "values": [
+            {
+              "name": {
+                "value": "Entry",
+                "synonyms": ["Events", "Entries", "Event"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ReadLast",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "read",
+              "type": "READ",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.248783830974.1204438173015"
+              }
+            },
+            {
+              "name": "log",
+              "type": "LOG",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "n",
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.248783830974.1204438173015",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want me to read last entry?"
+          }
+        ]
+      }
+    ]
+  }
+}

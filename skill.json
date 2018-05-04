@@ -1,0 +1,56 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Helps people with Fibromyalgia manage their symptoms",
+          "examplePhrases": [
+            "Alexa open fibro friend",
+            "Alexa ask fibro friend",
+            "Alexa tell fibro friend open symptom log",
+            "Alexa tell fibro friend open activity log"
+          ],
+          "keywords": [
+            "fibromyalgia",
+            "pain",
+            "mental illness"
+          ],
+          "name": "fibro friend",
+          "description":
+            "Full set of forms and logs for fibromyalgia sufferers"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "No Testing Instructions.",
+      "category": "HEALTH_AND_FITNESS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sslCertificateType": "Wildcard",
+          "uri": "https://fibro-friend-dev.us-east-1.elasticbeanstalk.com/"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa:devices:all:address:country_and_postal_code:read"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://fibro-friend-dev.us-east-1.elasticbeanstalk.com/privacy"
+        }
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": true
+    }
+  }
+}
